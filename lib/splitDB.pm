@@ -7,7 +7,7 @@ use warnings;
 use base;
 use Getopt::Long;
 
-my $usage="\nUsage: fifehgt splitDB --id <genome_id> --taxo <genome_taxonomy> --taxoes <taxonomy_file> --type <type_file>
+my $usage="\nUsage: FIFEHGT splitDB --id <genome_id> --taxo <genome_taxonomy> --taxoes <taxonomy_file> --type <type_file>
 
 splitDB program is used to split the genomic database into three groups: SG, CRG and DRG.
 

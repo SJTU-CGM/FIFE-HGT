@@ -8,7 +8,7 @@ use lib '.';
 use screenHGT;
 use Getopt::Long;
 
-my $usage="\nUsage: fifehgt WGSValidate [options] --dbdir <db_genome_dir> --dbInfo <db_info_file> --taxo <genome_taxonomy> --dbWGSDir <db_WGSdata_dir>
+my $usage="\nUsage: FIFEHGT WGSValidate [options] --dbdir <db_genome_dir> --dbInfo <db_info_file> --taxo <genome_taxonomy> --dbWGSDir <db_WGSdata_dir>
 
 WGSValidate program is used to validate potential HGTs using WGS datasets.
 
@@ -94,6 +94,7 @@ GetOptions(
     'mode=s'		=> \$mode,
     'length=i'		=> \$WGSflanking_length,
     'depth=i'		=> \$depth,
+    'help'      	=> \$help,
     'distant=s'		=> \$screen_distant,
     'self=s'            => \$screen_self,
     'idenCdHitEst=f'	=> \$cdhit_threshold

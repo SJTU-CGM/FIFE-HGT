@@ -8,7 +8,7 @@ use lib '.';
 use base;
 use Getopt::Long;
 
-my $usage="\nUsage: fifehgt screenHGT [options] --repeat <repeat_file> --singlecopy <singlecopy_file> --mitChl <mitChl_file> --taxo <genome_taxonomy>
+my $usage="\nUsage: FIFEHGT screenHGT [options] --repeat <repeat_file> --singlecopy <singlecopy_file> --mitChl <mitChl_file> --taxo <genome_taxonomy>
 
 screenHGT program is used to screen potential HGTs from sequence alignment results.
 

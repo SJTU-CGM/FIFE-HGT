@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use Getopt::Long;
 
-my $usage="\nUsage: fifehgt seqAlign [options] --db <db_genome_dir>
+my $usage="\nUsage: FIFEHGT seqAlign [options] --db <db_genome_dir>
 
 SeqAlignprogram is used to sequence alignment using LASTZ.
 

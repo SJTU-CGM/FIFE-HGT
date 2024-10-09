@@ -6,7 +6,7 @@ use strict;
 use warnings;
 use Getopt::Long;
 
-my $usage="\nUsage: fifehgt conPhyTree --genomeId <genome_id> --fullName <target_fullname> --dbId <db_id_file> --dbInfo <db_info_file>
+my $usage="\nUsage: FIFEHGT conPhyTree --genomeId <genome_id> --fullName <target_fullname> --dbId <db_id_file> --dbInfo <db_info_file>
 
 conPhyTree program is used to construct sequence phylogenetic tree to validate HGTs.
 
@@ -68,6 +68,7 @@ GetOptions(
     'fullName=s'	=> \$target_fullname,
     'dbId=s'		=> \$db_id_file,
     'dbInfo=s'		=> \$db_info_file,
+    'help'      	=> \$help,
     'outdir=s'		=> \$out_dir,
     'mode=s'            => \$mode,
     'distant=s'		=> \$distant
