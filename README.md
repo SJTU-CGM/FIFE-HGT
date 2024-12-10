@@ -1,4 +1,4 @@
-# FIFE-HGT: a Fast Identifier For Eukaryotes of Horizontal Gene Transfers
+# FIFE-HGT: a Fast Identifier For Eukaryote Horizontal Gene Transfers
 FIFE-HGT is a fast identification method for HGTs in eukaryotes by combining sequence composition filtering and sequence alignment to reduce both the false-positive rate and computational cost. Moreover, it could identify some novel HGTs because it broke the restriction of identifying HGTs involving protein coding regions only.
 
 ## Installation
