@@ -12,7 +12,6 @@ FIFE-HGT is a fast identification method for HGTs in eukaryotes by combining seq
 #### 1. Download the FIFE-HGT from github
 ```
 $ git clone https://github.com/SJTU-CGM/FIFE-HGT.git
-$ tar zxvf FIFE-HGT.tar.gz
 ```
 #### 2. Add bin/ to PATH and add lib/ to LD_LIBRARY_PATH
 ```
