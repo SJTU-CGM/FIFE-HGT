@@ -6,7 +6,8 @@ FIFE-HGT is a fast identification method for HGTs in eukaryotes by combining seq
 
 - Perl 5.26.3 or up
 - Python 3.11
-- Software needed: [lastz][1], [RepeatMasker][2], [TRF][3], [cd-hit-est][4], [Bowtie2][5], [BLAST][6], [MAFFT][7], [trimAl][8], [IQ-TREE][9].
+- Software needed: [lastz][1], [TRF][2], [cd-hit][3], [Bowtie2][4], [BLAST][5],[samtools][6], [MAFFT][7], [trimAl][8], [IQ-TREE][9].
+  You can also refer to this file (http://cgm.sjtu.edu.cn/hgt/FIFE/install.sh) to install the above software.
 
 ### Installation procedures
 #### 1. Download the FIFE-HGT from github
@@ -15,7 +16,7 @@ $ git clone https://github.com/SJTU-CGM/FIFE-HGT.git
 ```
 #### 2. Add bin/ to PATH and add lib/ to LD_LIBRARY_PATH
 ```
-$ export PATH=$PATH:/path/to/FIFE-HGT/:
+$ export PATH=$PATH:/path/to/FIFE-HGT/bin/:
 $ export PERL5LIB=$PERL5LIB:/path/to/FIFE-HGT/lib/:
 $ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/FIFE-HGT/lib/:
 ```
@@ -318,12 +319,11 @@ $ FIFEHGT conPhyTree --mode Strict --genomeId GCF_000146045.2 --fullName Sacchar
 Results can be found in the directory `path/to/example/conPhyTree`. 
 
 [1]: http://www.bx.psu.edu/~rsharris/lastz
-[2]: https://www.repeatmasker.org/RepeatMasker
-[3]: https://tandem.bu.edu/trf/downloads
-[4]: https://github.com/weizhongli/cdhit/releases
-[5]: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
-[6]: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+[2]: https://tandem.bu.edu/trf/downloads
+[3]: https://github.com/weizhongli/cdhit/releases
+[4]: https://bowtie-bio.sourceforge.net/bowtie2/index.shtml
+[5]: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/
+[6]: https://github.com/samtools/samtools/releases/
 [7]: https://mafft.cbrc.jp/alignment/software/
-[8]: https://vicfero.github.io/trimal/
+[8]: https://github.com/inab/trimal/releases
 [9]: http://www.iqtree.org/
-[10]: http://cgm.sjtu.edu.cn/hgt/FIFE/example.tar.gz
