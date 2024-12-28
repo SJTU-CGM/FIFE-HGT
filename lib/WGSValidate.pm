@@ -211,7 +211,6 @@ screenHGT::calDistribution($out_dir_afterWGS,$screen_distant,$genome_order,$geno
 #The minimum similarity of HGT in DRG is higher than the maximum similarity in CRG
 my $distantid = $db_id_dir."e_".$screen_distant.".id";
 screenHGT::distantIdenHclose($screen_distant,$screen_self,$hit_file_WGS,$db_id_dir,$type_file,$HGT_homologous_info_dir,$genome_file,$out_dir_afterWGS);
-print "$screen_distant,$hit_file_WGS,$db_id_dir,$type_file,$HGT_homologous_info_dir,$genome_file,$out_dir_afterWGS\n";
 
 #Remove redundancy using cd-hit-est
 my $dHcfa = $out_dir_afterWGS."distantHclose_".$screen_distant.".fa";
