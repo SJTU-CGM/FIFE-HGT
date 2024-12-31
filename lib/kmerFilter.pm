@@ -393,15 +393,10 @@ close FA;
 }
 
 sub removeSim{
-use lib '.';
-use base;
 my ($trf_out_file,$remove_per,$outbed,$genome_file,$outfa)=@_;
 
 trfFilter($trf_out_file,$remove_per,$outbed);
-`sed -i \"s/-/\t/g\" $outbed`;
-#system($comcov);
-
-base::getSeq($genome_file,$outbed,$outfa);
+getSeqfile($genome_file,$outbed,$outfa);
 }
 
 #Remove fragments with simple repeat sequences
@@ -429,11 +424,40 @@ foreach my $k (keys(%seq)){
     my $repeat=($seq{$k}=~s/N/N/g);
     my $cov=$repeat/$length;
     if($cov < $remove_per){
-        print OUT "$k\n";
+        print OUT "$split[0]\t$split[1]\t$split[2]\n";
     }
 }
 
 close MASK; close OUT;
+}
+
+sub getSeqfile{
+my ($fa,$bed,$out)= @_;
+open(FA,$fa)||die("getSeq: error with fasta $fa\n");
+open(BED,$bed)||die("getSeq: error with bed $bed\n");
+open(OUT,">$out")||die("getSeq: error with out $out\n");
+
+my %hash = ();
+my $id = "";
+while(<FA>){
+    chomp();
+    if($_ =~ />([^\s]+)/){
+        $id = $1;
+    }
+    else{
+        $hash{$id} = $_;
+    }
+}
+
+while(<BED>){
+    chomp();
+    my @arr = split(/\s+/,$_);
+    my ($chr,$start,$end) = ($arr[0],$arr[1],$arr[2]);
+    my $HGT = uc(substr($hash{$chr},$start-1,$end-$start+1));
+    print OUT ">$chr-$start-$end\n$HGT\n";
+}
+
+close FA;close BED;close OUT;
 }
 
 1;
